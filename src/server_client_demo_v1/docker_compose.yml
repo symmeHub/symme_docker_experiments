@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./server
+    container_name: server_container
+    volumes:
+      - data_volume:/data
+    ports:
+      - "5000:5000"
+
+  client:
+    build:
+      context: ./client
+    container_name: client_container
+    volumes:
+      - data_volume:/data
+    depends_on:
+      - server
+
+volumes:
+  data_volume:

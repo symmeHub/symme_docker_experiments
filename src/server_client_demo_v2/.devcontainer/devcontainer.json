@@ -1,0 +1,13 @@
+{
+    "name": "Client Dev Container",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "client",
+    "workspaceFolder": "/workspace",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/sh"
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+    ]
+}

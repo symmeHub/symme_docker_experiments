@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  server:
+    build: ./server
+    volumes:
+      - data:/data
+    ports:
+      - "2222:22"
+  # client:
+  #   build: ./client
+  #   volumes:
+  #     - data:/data
+  #   depends_on:
+  #     - server
+  client:
+    build: ./client
+    volumes:
+      - data:/data
+    depends_on:
+      - server
+
+volumes:
+  data:
