@@ -1,6 +1,6 @@
 {
     "name": "Client Dev Container",
-    "dockerComposeFile": "../docker-compose.yml",
+    "dockerComposeFile": "docker-compose.yml",
     "service": "client",
     "workspaceFolder": "/workspace",
     "settings": {
@@ -9,5 +9,6 @@
     "extensions": [
         "ms-python.python",
         "ms-azuretools.vscode-docker"
-    ]
+    ],
+    "overrideCommand": true
 }
